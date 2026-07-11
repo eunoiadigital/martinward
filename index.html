@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segera Hadir - martinward digital world</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f1f5f9;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 28px;
+            padding: 48px 40px;
+            max-width: 640px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.06), 0 8px 24px rgba(0, 0, 0, 0.03);
+        }
+
+        .brand {
+            font-size: 26px;
+            font-weight: 700;
+            color: #0f172a;
+            letter-spacing: -0.3px;
+            margin-bottom: 4px;
+        }
+        .brand span {
+            color: #2563eb;
+        }
+        .brand-sub {
+            font-size: 13px;
+            color: #94a3b8;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 32px;
+            border-bottom: 1px solid #f1f5f9;
+            padding-bottom: 20px;
+        }
+
+        .icon-wrapper {
+            display: inline-block;
+            font-size: 52px;
+            line-height: 1;
+            margin-bottom: 16px;
+            color: #2563eb;
+            animation: spin 8s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        h1 {
+            font-size: 30px;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            font-size: 17px;
+            color: #475569;
+            font-weight: 400;
+            margin-bottom: 6px;
+        }
+
+        .description {
+            font-size: 15px;
+            color: #64748b;
+            line-height: 1.7;
+            max-width: 420px;
+            margin: 8px auto 28px auto;
+        }
+
+        .timer-container {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin: 8px 0 30px 0;
+        }
+
+        .timer-box {
+            background: #f8fafc;
+            border-radius: 16px;
+            padding: 14px 8px;
+            min-width: 72px;
+            border: 1px solid #e9edf2;
+        }
+
+        .timer-box .number {
+            font-size: 34px;
+            font-weight: 700;
+            color: #0f172a;
+            display: block;
+            line-height: 1.1;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .timer-box .label {
+            font-size: 11px;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 4px;
+            display: block;
+            font-weight: 600;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin: 10px 0 6px 0;
+        }
+
+        .social-links a {
+            color: #94a3b8;
+            font-size: 20px;
+            text-decoration: none;
+            transition: 0.2s;
+            display: inline-block;
+        }
+
+        .social-links a:hover {
+            color: #2563eb;
+            transform: translateY(-2px);
+        }
+
+        .footer-note {
+            margin-top: 32px;
+            font-size: 13px;
+            color: #cbd5e1;
+            border-top: 1px solid #f1f5f9;
+            padding-top: 22px;
+        }
+
+        @media (max-width: 520px) {
+            .card {
+                padding: 32px 20px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            .brand {
+                font-size: 20px;
+            }
+            .timer-box {
+                min-width: 58px;
+                padding: 10px 4px;
+            }
+            .timer-box .number {
+                font-size: 26px;
+            }
+            .timer-container {
+                gap: 8px;
+            }
+            .icon-wrapper {
+                font-size: 40px;
+            }
+            .social-links {
+                gap: 16px;
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+
+        <div class="brand">
+            MARTINWARD <span>·</span> Digital World
+        </div>
+        <div class="brand-sub">Sedang dalam pemeliharaan</div>
+
+        <div class="icon-wrapper">⚙️</div>
+
+        <h1>Kami Segera Kembali</h1>
+        <p class="subtitle">Website sedang ditingkatkan untuk performa maksimal.</p>
+        <p class="description">
+            Terima kasih atas kesabaran Anda. Kami hadir dengan tampilan baru 
+            dan fitur yang lebih handal dalam 14 hari ke depan.
+        </p>
+
+        <div class="timer-container">
+            <div class="timer-box">
+                <span class="number" id="days">00</span>
+                <span class="label">Hari</span>
+            </div>
+            <div class="timer-box">
+                <span class="number" id="hours">00</span>
+                <span class="label">Jam</span>
+            </div>
+            <div class="timer-box">
+                <span class="number" id="minutes">00</span>
+                <span class="label">Menit</span>
+            </div>
+            <div class="timer-box">
+                <span class="number" id="seconds">00</span>
+                <span class="label">Detik</span>
+            </div>
+        </div>
+
+        <div class="social-links">
+            <a href="#" target="_blank" title="Instagram">📷</a>
+            <a href="#" target="_blank" title="WhatsApp">💬</a>
+            <a href="#" target="_blank" title="YouTube">▶️</a>
+            <a href="mailto:halo@domainanda.com" title="Email">✉️</a>
+        </div>
+
+        <div class="footer-note">
+            &copy; 2026 martinward · digital world
+        </div>
+    </div>
+
+    <!-- ================================================== -->
+    <!-- SCRIPT DIPERBAIKI - LEBIH TAHAN BANTING            -->
+    <!-- ================================================== -->
+    <script>
+        (function() {
+            const STORAGE_KEY = 'martinward_maintenance_end';
+            let targetDate;
+
+            // ----- Fungsi untuk mendapatkan target waktu -----
+            function getTargetDate() {
+                try {
+                    let stored = localStorage.getItem(STORAGE_KEY);
+                    if (stored) {
+                        const parsed = parseInt(stored, 10);
+                        // Jika angka valid DAN masih di masa depan
+                        if (!isNaN(parsed) && parsed > Date.now()) {
+                            console.log('✅ Timer lanjut dari data sebelumnya:', new Date(parsed));
+                            return new Date(parsed);
+                        }
+                    }
+                } catch (e) {
+                    console.warn('⚠️ Gagal baca localStorage, buat baru:', e);
+                }
+
+                // Jika tidak ada data atau data rusak/kadaluarsa, buat 14 hari baru
+                const newTarget = new Date();
+                newTarget.setDate(newTarget.getDate() + 14);
+                try {
+                    localStorage.setItem(STORAGE_KEY, newTarget.getTime());
+                    console.log('🆕 Timer baru dibuat (14 hari dari sekarang):', newTarget);
+                } catch (e) {
+                    console.warn('⚠️ Gagal simpan ke localStorage, timer tetap berjalan di memori:', e);
+                }
+                return newTarget;
+            }
+
+            // ----- Inisialisasi target -----
+            targetDate = getTargetDate();
+
+            // ----- Fungsi update timer -----
+            function updateCountdown() {
+                const now = Date.now();
+                const distance = targetDate.getTime() - now;
+
+                // Ambil elemen
+                const daysEl = document.getElementById('days');
+                const hoursEl = document.getElementById('hours');
+                const minutesEl = document.getElementById('minutes');
+                const secondsEl = document.getElementById('seconds');
+
+                // Jika waktu habis
+                if (distance <= 0) {
+                    daysEl.innerHTML = '00';
+                    hoursEl.innerHTML = '00';
+                    minutesEl.innerHTML = '00';
+                    secondsEl.innerHTML = '00';
+                    return;
+                }
+
+                // Hitung
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                // Tampilkan
+                daysEl.innerHTML = String(days).padStart(2, '0');
+                hoursEl.innerHTML = String(hours).padStart(2, '0');
+                minutesEl.innerHTML = String(minutes).padStart(2, '0');
+                secondsEl.innerHTML = String(seconds).padStart(2, '0');
+            }
+
+            // ----- Jalankan -----
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+
+            // Tampilkan info di console agar Anda yakin kode berjalan
+            console.log('⏳ Countdown berjalan untuk:', targetDate);
+
+        })();
+    </script>
+
+</body>
+</html>
